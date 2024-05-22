@@ -3,3 +3,4 @@ pyttsx3==2.90
 openai-whisper
 soundfile==0.12.1
 replicate
+playsound

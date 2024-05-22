@@ -1,24 +1,12 @@
 import replicate
 
-'''
-class LLM:
-    def __init__(self, model_name="google/gemma-2b"):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(model_name)
-
-    def generate(self, input_text):
-        input_ids = self.tokenizer(input_text, return_tensors="pt")
-
-        outputs = self.model.generate(**input_ids)
-        return self.tokenizer.decode(outputs[0])
-'''
-
-
 class LLM:
     def __init__(self, model_name):
         self.model_name = model_name
 
     def generate(self, input_text):
+        print("Generating text...")
+
         output = replicate.run(
             self.model_name,
             input={
