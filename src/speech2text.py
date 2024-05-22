@@ -8,7 +8,6 @@ class STT:
         self.engine = sr.Recognizer()
         self.engine.pause_threshold = 1
         self.api_name = api_name
-        self.client = OpenAI()
 
     def listen(self):
         with sr.Microphone() as source:
